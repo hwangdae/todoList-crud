@@ -1,24 +1,14 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import Header from '../component/Header';
+import Main from '../component/Main';
 
 function Home() {
-
-    const navigate = useNavigate();
-
-  return (
-    <>
-        <Header/>
-        <main>
-            <button onClick={()=>{
-                navigate("/WriteTodo")
-            }}>할일 작성하기</button>
-            <button onClick={()=>{
-                navigate("/TodoList")
-            }}>TodoList</button>
-        </main>
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <Main />
+        </>
+    )
 }
 
 export default Home
