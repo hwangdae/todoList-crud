@@ -60,14 +60,34 @@
       "id": 12
     },
     {
-      "writer": "33",
-      "title": "33",
-      "content": "33",
+      "writer": "라라라",
+      "title": "벌크업 식단 공개",
+      "content": "한달동안 7kg 찌운 벌크업 식단 공유",
       "foodCal": [
         {
-          "id": "nYwMYCmW6",
-          "food": "11",
-          "calorie": "11"
+          "id": "efElm0tcl",
+          "food": "밥 3끼",
+          "calorie": "900"
+        },
+        {
+          "id": "UVkRFfEj_",
+          "food": "땅콩버터 3스푼",
+          "calorie": "270"
+        },
+        {
+          "id": "uLFadl8Sp",
+          "food": "계란 6개",
+          "calorie": "480"
+        },
+        {
+          "id": "0RZqO5TH6",
+          "food": "프로틴",
+          "calorie": "140"
+        },
+        {
+          "id": "5GS4T-rzp",
+          "food": "미숫가루",
+          "calorie": "60"
         }
       ],
       "passWord": "123",

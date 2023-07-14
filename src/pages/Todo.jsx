@@ -104,18 +104,13 @@ function Todo() {
   const foundData = todo?.find((item) => {
     return item.id === parseInt(params.id);
   });
-  console.log(foundData)
-  const foundfood = foundData?.foodCal.map((item)=>{
-    return item.food
+  const foundfoodcal = foundData?.foodCal?.map((item)=>{
+      return item
   })
-  const {data1} = foundfood
-  console.log([...foundfood])
-  console.log(data1)
-  console.log("foundData", foundData);
-  if (foundData?.foodCal) {
-    
-    console.log("foodcalid", foundData.foodCal.food);
-  }
+  const caloriesSum = foundfoodcal?.reduce((sum,item)=>{
+    return sum + parseInt(item.calorie)
+  },0)
+  console.log(caloriesSum)
 
   const onUpdateclickHandler = async () => {
     try {
@@ -136,8 +131,6 @@ function Todo() {
         resetUpdateWriter("");
         resetUpdateTitle("");
         resetUpdateContent("");
-        /* resetUpdateFood("")
-        resetUpdateCalorie("") */
         resetCheckPassword("");
       }
     } catch (error) {
@@ -226,24 +219,22 @@ function Todo() {
               <DetailTitle>{foundData.title}</DetailTitle>
               <DetailcontentWrap>
                 <DetailContent>{foundData.content}</DetailContent>
-                {foundData.foodcal?.forEach(foodItem => {
+                {foundData.foodCal.map((foodItem, index) => {
                   return (
-                    <div key={foodItem.id}>
-                      <p>{foodItem.food}</p>
-                      <p>{foodItem.calorie}</p>
+                    <div key={index}>
+                      {foodItem.food}
+                      <span>({foodItem.calorie}Kcal)</span>
                     </div>
                   );
                 })}
-
+                <p>총 {caloriesSum} Kcal</p>
               </DetailcontentWrap>
 
               <DetailButton>수정하기</DetailButton>
             </form>
           </DetailInner>
         </DetailWrap>
-      ) : (
-        null
-      )}
+      ) : null}
     </>
   );
 }
