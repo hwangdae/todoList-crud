@@ -11,10 +11,12 @@ const TodoListWrap = styled.main`
 const TodoListInner=styled.div`
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 `
 const Todo = styled.div`
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   border-radius: 8px;
   padding: 30px 20px;
@@ -22,6 +24,7 @@ const Todo = styled.div`
   box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
 `;
 const TodoInfo=styled.div`
+margin-bottom: 40px;
   
 `
 const TodoWriter=styled.p`
@@ -34,14 +37,17 @@ const TodoTitle=styled.h2`
   font-weight: 400;
 `
 const TodoButtonWrap=styled.div`
+/* width: 100%; */
+display: flex;
+gap: 20px;
 `
 const TodoButton=styled.button`
+  width: 50%;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   background: #A7727D;
   color: #fff;
-  margin-right: 8px;
   cursor: pointer;
 `
 
